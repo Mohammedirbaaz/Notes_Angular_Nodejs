@@ -1,0 +1,16 @@
+
+<div class="menu">
+    <div class="menu-first">
+        Notes!
+    </div>
+    <div class="menu-second">
+        @if(isLoggedIn==true)
+        {
+            <p class="menu-sub-second">Home</p>
+            <p class="menu-sub-second" (click)="logout()">Logout</p>
+        }@else{
+            <p class="menu-sub-second" (click)="login()">Login</p>
+        }
+    </div>
+</div>
+

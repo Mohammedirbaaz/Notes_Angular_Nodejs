@@ -1,0 +1,17 @@
+<app-menu/>
+<div class="home">
+    <div class="inputs">
+        <div class="inputs-content">
+            <input type="text" class="input-text input-head" placeholder="title" name="title" (change)="onchangetitle($event)"/>
+            <textarea class="input-text input-textarea" placeholder="notes"  name="notes" (change)="onchangenotes($event)"></textarea>
+        </div>
+        <button class="input-button" (click)="createnote()">create</button>
+    </div>
+    <div class="notes">
+        <div class="notes-each" *ngFor="let item of divs" [ngStyle]="{'background-color':colorfunc()}">
+            <h1>{{item.title}}</h1>
+            <p>{{item.notes}}</p>
+            <p>added time : 24/07/2024</p>
+        </div>
+    </div>
+</div>
